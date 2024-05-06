@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tweet</title>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+
+</head>
+
+
+<body>
+<header style="margin-bottom: 50px;">
+  <h1>Tweets</h1>
+</header>
+<main>
+<p id="notice"><%= notice %></p>
+
+<table>
+  <thead style="text-align: center;">
+  <tr>
+    <th colspan="5" style="text-align: center;">Content</th>
+  </tr>
+  </thead>
+
+  <tbody>
+    <% @tweets.each do |tweet| %>
+      <tr>
+       
+        <td><%= tweet.content %></td>
+        <td><%= link_to 'Show', tweet %></td>
+        <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
+        <td><%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+  <center>
+  <%= link_to 'New Tweet', new_tweet_path, class: 'btn btn-primary' %>
+  </center>
+</main>
+
+<footer>
+  <%= link_to "index", tweets_path %>
+</footer>
+
+</body>
+</html>

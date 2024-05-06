@@ -1,0 +1,41 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  main {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  table {
+    width: 100%;
+  
+  }
+  
+  th, td {
+
+    text-align: left;
+    padding: 8px;
+  }
+  
+  th {
+    margin:10px
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  
+  footer {
+    text-align: center;
+    background-color: #f8f9fa;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
